@@ -1,0 +1,8 @@
+_target_: genpred.training.vectorizers.SentencePieceTfidfVectorizer
+tokenizer:
+  _target_: genpred.training.tokenizer.load_tokenizer
+  name: ${dataset.name}
+  vocab_size: ${dataset.vocab_size}
+min_df: 1
+max_df: 1.0
+binary: false

@@ -1,0 +1,2 @@
+train_accuracy,val_accuracy,test_accuracy,train_matthews_corrcoef,val_matthews_corrcoef,test_matthews_corrcoef,train_roc_auc,val_roc_auc,test_roc_auc
+1.0,0.882,0.887,1.0,0.764,0.774,1.0,0.937,0.947

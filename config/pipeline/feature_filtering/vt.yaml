@@ -1,0 +1,4 @@
+estimator:
+  _target_: sklearn.feature_selection.VarianceThreshold
+  threshold: 0
+hparams: {}

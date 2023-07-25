@@ -1,0 +1,12 @@
+defaults:
+  - _self_
+  - logdir: default
+  - dataset: train
+  - pipeline/feature_filtering: vt
+  - pipeline/classifier: lgbm
+  - tuner: default
+
+workdir: ${hydra:runtime.cwd}
+ignore_warnings: true
+print_config: true
+seed: 0

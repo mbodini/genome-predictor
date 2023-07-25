@@ -1,0 +1,11 @@
+_target_: sklearn.model_selection.RandomizedSearchCV
+n_iter: 50
+n_jobs: -1
+verbose: 10
+scoring:
+  - accuracy
+  - matthews_corrcoef
+  - roc_auc
+refit: accuracy
+return_train_score: true
+pre_dispatch: 50

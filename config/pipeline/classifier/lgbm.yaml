@@ -1,0 +1,23 @@
+estimator:
+  _target_: lightgbm.LGBMClassifier
+  objective: binary
+  n_jobs: 1
+  boosting_type: dart
+  learning_rate: 0.9
+hparams:
+  classifier__max_bin:
+    _target_: scipy.stats.randint
+    low: 4
+    high: 32
+  classifier__max_depth:
+    _target_: scipy.stats.randint
+    low: 4
+    high: 10
+  classifier__num_leaves:
+    _target_: scipy.stats.randint
+    low: 16
+    high: 256
+  classifier__n_estimators:
+    _target_: scipy.stats.randint
+    low: 500
+    high: 2000

@@ -1,0 +1,3 @@
+_target_: genpred.training.vectorizers.KMerTfidfVectorizer
+min_df: 1
+max_df: 1.0

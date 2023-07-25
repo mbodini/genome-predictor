@@ -1,0 +1,60 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=43.0.0", "wheel"]
+
+[project]
+authors = [
+  {name = "Marco Podda", email = "marco.podda@unipi.it"},
+  {name = "Margherita Bodini", email = "margherita.x.bodini@gsk.com"},
+]
+dependencies = [
+  "biopython",
+  "ipython",
+  "jupyter",
+  "pandas",
+  "scikit-learn",
+  "lightgbm",
+  "matplotlib",
+  "seaborn",
+  "tokenizers",
+  "hydra-core",
+  "hydra-colorlog",
+  "rich",
+  "pyrootutils",
+  "gff3_parser",
+  "compress_pickle",
+  "tqdm",
+  "statsmodels",
+]
+description = "Predicts outcomes from an entire bacterial genome"
+license = {file = "LICENSE.txt"}
+maintainers = [
+  {name = "Margherita Bodini", email = "margherita.x.bodini@gsk.com"},
+]
+name = "genome-predictor"
+readme = "README.md"
+requires-python = ">=3.10"
+version = "0.1.0"
+
+[project.urls]
+"Homepage" = "https://github.com/"
+
+[project.scripts]
+genpred-dl = "genpred.download:main"
+genpred-ko-capsule = "genpred.ko_capsule:main"
+genpred-ko-gene = "genpred.ko_gene:main"
+genpred-ko-vf = "genpred.ko_vf:main"
+genpred-prep = "genpred.preprocess:main"
+genpred-tok = "genpred.tokenization:main"
+genpred-train = "genpred.train:main"
+genpred-vect = "genpred.vectorization:main"
+
+[tool.setuptools.packages.find]
+include = ["genpred*"] # package names should match these glob patterns (["*"] by default)
+where = ["src"] # list of folders that contain the packages (["."] by default)
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120

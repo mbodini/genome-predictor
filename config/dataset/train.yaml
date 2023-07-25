@@ -1,0 +1,4 @@
+_target_: genpred.training.loaders.load_dataset
+name: disease
+vectorizer: sentencepiece
+vocab_size: 32000

@@ -9,7 +9,7 @@
 
 Clone the repository
 
-    git clone git@mygithub.gsk.com:gsk-tech/genome-predictor.git
+    git clone git@github.com:mbodini/genome-predictor.git
     cd genome-predictor
 
 Create a virtual environment and activate it (make sure the conda package manager is installed first):
